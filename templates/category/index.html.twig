@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Category index{% endblock %}
+
+{% block body %}
+
+
+    <div class="row space20">
+        <div class="col-12">
+            <a CLASS="btn btn-success pull-left" href="{{ path('category_new') }}">Create new</a>
+        </div>
+    </div>
+    <div class="row space20">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for category in categories %}
+                        <tr>
+                            <td>{{ category.id }}</td>
+                            <td>{{ category.name }}</td>
+                            <td>
+                                <a class="btn btn-success" href="{{ path('category_show', {'id': category.id}) }}">
+                                    show
+                                </a>
+                                <a class="btn btn-success"
+                                   href="{{ path('category_edit', {'id': category.id}) }}">edit</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row space20">
+        <div class="col-12">
+            {{ knp_pagination_render(categories, null, {}, {
+                'position': 'centered',
+                'size': 'large',
+                'rounded': true,
+            }) }}
+        </div>
+    </div>
+
+{% endblock %}
