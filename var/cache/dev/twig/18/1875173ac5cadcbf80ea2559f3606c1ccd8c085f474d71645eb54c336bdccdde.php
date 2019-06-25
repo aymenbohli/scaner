@@ -92,7 +92,9 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 29
         echo "</head>
-<body class=\"sidebar-icon-only\">
+<body ";
+        // line 30
+        echo ">
 <div class=\"container-scroller\">
     <!-- partial:../../partials/_navbar.html -->
     <nav class=\"navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row\">
@@ -285,63 +287,49 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"\">
-                        <i class=\"mdi mdi-shield-check menu-icon\"></i>
+                        <i class=\"mdi mdi-home menu-icon\"></i>
                         <span class=\"menu-title\">Dashboard</span>
                     </a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
         // line 213
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("question_index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category_index");
         echo "\">
-                        <i class=\"mdi mdi-comment-processing-outline menu-icon\"></i>
-                        <span class=\"menu-title\">Question Management</span>
+                        <i class=\"mdi mdi-format-align-justify menu-icon\"></i>
+                        <span class=\"menu-title\">Category</span>
                     </a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
         // line 219
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category_index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("question_index");
         echo "\">
-                        <i class=\"mdi mdi-group menu-icon\"></i>
-                        <span class=\"menu-title\">Category Question</span>
+                        <i class=\"mdi mdi-message-processing menu-icon\"></i>
+                        <span class=\"menu-title\">Question</span>
                     </a>
                 </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"";
-        // line 225
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category_cours_index");
-        echo "\">
-                        <i class=\"mdi mdi-group menu-icon\"></i>
-                        <span class=\"menu-title\">Category Cours</span>
-                    </a>
-                </li>
-                <li class=\"nav-item\">
+             ";
+        // line 230
+        echo "                <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
         // line 231
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cours_index");
         echo "\">
-                        <i class=\"mdi mdi-group menu-icon\"></i>
-                        <span class=\"menu-title\">Cours Management</span>
+                        <i class=\"mdi mdi-book-multiple-variant menu-icon\"></i>
+                        <span class=\"menu-title\">Cours</span>
                     </a>
                 </li>
             </ul>
         </nav>
         <!-- partial -->
         <div class=\"main-panel\">
-            <div class=\"content-wrapper\">
-                <div class=\"main-panel\">
-                    <div class=\"content-wrapper\">
-                        <div class=\"card\">
-                            <div class=\"card-body\">
-                                ";
-        // line 245
+            <div class=\"content-wrapper\" style=\"background: white;\">
+                ";
+        // line 241
         $this->displayBlock('body', $context, $blocks);
-        // line 246
-        echo "                            </div>
-                        </div>
-                    </div>
-                </div>
+        // line 242
+        echo "
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
                 <div class=\"footer-wrapper\">
@@ -362,35 +350,35 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
 
     ";
-        // line 269
+        // line 262
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 270
+        // line 263
         echo "    <!-- container-scroller -->
     <!-- base:js -->
     <script src=\"";
-        // line 272
+        // line 265
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/vendors/js/vendor.bundle.base.js"), "html", null, true);
         echo "\"></script>
     <!-- endinject -->
     <!-- inject:js -->
     <script src=\"";
-        // line 275
+        // line 268
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/off-canvas.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 276
+        // line 269
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/hoverable-collapse.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 277
+        // line 270
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/template.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 278
+        // line 271
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/settings.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 279
+        // line 272
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/todolist.js"), "html", null, true);
         echo "\"></script>
     <!-- endinject -->
@@ -440,7 +428,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
     }
 
-    // line 245
+    // line 241
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -457,7 +445,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
     }
 
-    // line 269
+    // line 262
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -486,7 +474,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
     public function getDebugInfo()
     {
-        return array (  461 => 269,  444 => 245,  427 => 28,  410 => 7,  394 => 279,  390 => 278,  386 => 277,  382 => 276,  378 => 275,  372 => 272,  368 => 270,  366 => 269,  341 => 246,  339 => 245,  322 => 231,  313 => 225,  304 => 219,  295 => 213,  273 => 194,  252 => 176,  235 => 162,  220 => 150,  205 => 138,  94 => 29,  92 => 28,  83 => 22,  78 => 20,  70 => 15,  66 => 14,  62 => 13,  53 => 7,  45 => 1,);
+        return array (  449 => 262,  432 => 241,  415 => 28,  398 => 7,  382 => 272,  378 => 271,  374 => 270,  370 => 269,  366 => 268,  360 => 265,  356 => 263,  354 => 262,  332 => 242,  330 => 241,  317 => 231,  314 => 230,  306 => 219,  297 => 213,  275 => 194,  254 => 176,  237 => 162,  222 => 150,  207 => 138,  97 => 30,  94 => 29,  92 => 28,  83 => 22,  78 => 20,  70 => 15,  66 => 14,  62 => 13,  53 => 7,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -520,7 +508,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
     </style>
     {% block stylesheets %}{% endblock %}
 </head>
-<body class=\"sidebar-icon-only\">
+<body {#class=\"sidebar-icon-only\"#}>
 <div class=\"container-scroller\">
     <!-- partial:../../partials/_navbar.html -->
     <nav class=\"navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row\">
@@ -698,48 +686,41 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"\">
-                        <i class=\"mdi mdi-shield-check menu-icon\"></i>
+                        <i class=\"mdi mdi-home menu-icon\"></i>
                         <span class=\"menu-title\">Dashboard</span>
                     </a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"{{ path('question_index') }}\">
-                        <i class=\"mdi mdi-comment-processing-outline menu-icon\"></i>
-                        <span class=\"menu-title\">Question Management</span>
-                    </a>
-                </li>
-                <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"{{ path('category_index') }}\">
-                        <i class=\"mdi mdi-group menu-icon\"></i>
-                        <span class=\"menu-title\">Category Question</span>
+                        <i class=\"mdi mdi-format-align-justify menu-icon\"></i>
+                        <span class=\"menu-title\">Category</span>
                     </a>
                 </li>
                 <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"{{ path('question_index') }}\">
+                        <i class=\"mdi mdi-message-processing menu-icon\"></i>
+                        <span class=\"menu-title\">Question</span>
+                    </a>
+                </li>
+             {#   <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"{{ path('category_cours_index') }}\">
                         <i class=\"mdi mdi-group menu-icon\"></i>
                         <span class=\"menu-title\">Category Cours</span>
                     </a>
-                </li>
+                </li>#}
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"{{ path('cours_index') }}\">
-                        <i class=\"mdi mdi-group menu-icon\"></i>
-                        <span class=\"menu-title\">Cours Management</span>
+                        <i class=\"mdi mdi-book-multiple-variant menu-icon\"></i>
+                        <span class=\"menu-title\">Cours</span>
                     </a>
                 </li>
             </ul>
         </nav>
         <!-- partial -->
         <div class=\"main-panel\">
-            <div class=\"content-wrapper\">
-                <div class=\"main-panel\">
-                    <div class=\"content-wrapper\">
-                        <div class=\"card\">
-                            <div class=\"card-body\">
-                                {% block body %}{% endblock %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class=\"content-wrapper\" style=\"background: white;\">
+                {% block body %}{% endblock %}
+
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
                 <div class=\"footer-wrapper\">

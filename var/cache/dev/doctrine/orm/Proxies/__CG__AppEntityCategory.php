@@ -64,10 +64,10 @@ class Category extends \App\Entity\Category implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'questions'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'questions', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'cours'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'questions'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'questions', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'cours'];
     }
 
     /**
@@ -241,6 +241,39 @@ class Category extends \App\Entity\Category implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeQuestion', [$question]);
 
         return parent::removeQuestion($question);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCours(): \Doctrine\Common\Collections\Collection
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCours', []);
+
+        return parent::getCours();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addCour(\App\Entity\Cours $cours): \App\Entity\Category
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addCour', [$cours]);
+
+        return parent::addCour($cours);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeCour(\App\Entity\Cours $cours): \App\Entity\Category
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeCour', [$cours]);
+
+        return parent::removeCour($cours);
     }
 
 }

@@ -8,7 +8,7 @@
         [
             'stdClass' => [
                 'targetEntity' => [
-                    'App\\Entity\\CategoryCours',
+                    'App\\Entity\\Category',
                 ],
                 'inversedBy' => [
                     'cours',

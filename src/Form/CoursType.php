@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Category;
 use App\Entity\CategoryCours;
 use App\Entity\Cours;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -19,8 +20,8 @@ class CoursType extends AbstractType
             ->add('file')
             ->add('category', EntityType::class, [
                 'label' => 'category: ',
-                'class' => CategoryCours::class,
-                'choice_label' => function (CategoryCours $customer) {
+                'class' => Category::class,
+                'choice_label' => function (Category $customer) {
                     return $customer->getName();
                 },
             ])

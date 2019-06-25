@@ -32,7 +32,7 @@ class Cours
     private $file;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\CategoryCours", inversedBy="cours")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="cours")
      */
     private $category;
 
@@ -77,12 +77,12 @@ class Cours
         return $this;
     }
 
-    public function getCategory(): ?CategoryCours
+    public function getCategory(): ? Category
     {
         return $this->category;
     }
 
-    public function setCategory(?CategoryCours $category): self
+    public function setCategory(?Category $category): self
     {
         $this->category = $category;
 
