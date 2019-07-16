@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Knp\Component\Pager\PaginatorInterface;
 
 /**
  * @Route("/question")
@@ -19,7 +20,7 @@ class QuestionController extends AbstractController
     /**
      * @Route("/", name="question_index", methods={"GET"})
      */
-    public function index(QuestionRepository $questionRepository): Response
+    public function index(Request $request,QuestionRepository $questionRepository,PaginatorInterface $paginator): Response
     {/*
         $product = $this->getDoctrine()
             ->getRepository( Question::class)
@@ -28,8 +29,15 @@ class QuestionController extends AbstractController
      //die;   // ...
        $categoryName = $product->getCategory()->getName();
 dump($categoryName);die;*/
+
+$pagination = $paginator->paginate(
+            $questionRepository->findAll(), /* query NOT result */
+            $request->query->getInt('page', 1), /*page number*/
+            4 /*limit per page*/
+        );
+
         return $this->render('question/index.html.twig', [
-            'questions' => $questionRepository->findAll(),
+            'questions' => $pagination,
         ]);
     }
 
@@ -46,6 +54,8 @@ dump($categoryName);die;*/
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($question);
             $entityManager->flush();
+            
+            $this->addFlash('success', 'question créé!');
 
             return $this->redirectToRoute('question_index');
         }
@@ -76,6 +86,7 @@ dump($categoryName);die;*/
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $this->addFlash('success', 'question Modifier!');
 
             return $this->redirectToRoute('question_index', [
                 'id' => $question->getId(),
@@ -97,6 +108,8 @@ dump($categoryName);die;*/
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($question);
             $entityManager->flush();
+            $this->addFlash('success', 'question Supprimer!');
+
         }
 
         return $this->redirectToRoute('question_index');

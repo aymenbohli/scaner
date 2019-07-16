@@ -25,6 +25,7 @@
             padding: 15px 0;
         }
     </style>
+    
     {% block stylesheets %}{% endblock %}
 </head>
 <body {#class="sidebar-icon-only"#}>
@@ -212,7 +213,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('category_index') }}">
                         <i class="mdi mdi-format-align-justify menu-icon"></i>
-                        <span class="menu-title">Category</span>
+                        <span class="menu-title">Catégories</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -237,9 +238,19 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
-            <div class="content-wrapper" style="background: white;">
-                {% block body %}{% endblock %}
+            <div class="content-wrapper">
 
+           {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+             {% block body %}
+
+
+                {% endblock %}
+</div>
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
                 <div class="footer-wrapper">

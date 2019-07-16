@@ -62,7 +62,7 @@ class __TwigTemplate_abd1726c33a0d382ee424af1eb4134fc6f3932fe97719d6210a1ebcf2ea
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "New Question";
+        echo "créer Question";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -81,19 +81,19 @@ class __TwigTemplate_abd1726c33a0d382ee424af1eb4134fc6f3932fe97719d6210a1ebcf2ea
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"col-lg-12 grid-margin stretch-card\">
-    <div class=\"card\">
-        <div class=\"card-body\">
-            <h4 class=\"card-title\">Create new Question</h4>
-
-    ";
+        echo "  <div class=\"row\">
+            <div class=\"col-md-7 grid-margin stretch-card\">
+              <div class=\"card\">
+                <div class=\"card-body\">
+                  <h4 class=\"card-title\">créer Question</h4>
+\t\t\t\t\t";
         // line 11
         echo twig_include($this->env, $context, "question/_form.html.twig");
         echo "
-
-        </div>
-    </div>
-</div>
+                </div>
+              </div>
+            </div>
+         </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,19 +122,19 @@ class __TwigTemplate_abd1726c33a0d382ee424af1eb4134fc6f3932fe97719d6210a1ebcf2ea
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}New Question{% endblock %}
+{% block title %}créer Question{% endblock %}
 
 {% block body %}
-<div class=\"col-lg-12 grid-margin stretch-card\">
-    <div class=\"card\">
-        <div class=\"card-body\">
-            <h4 class=\"card-title\">Create new Question</h4>
-
-    {{ include('question/_form.html.twig') }}
-
-        </div>
-    </div>
-</div>
+  <div class=\"row\">
+            <div class=\"col-md-7 grid-margin stretch-card\">
+              <div class=\"card\">
+                <div class=\"card-body\">
+                  <h4 class=\"card-title\">créer Question</h4>
+\t\t\t\t\t{{ include('question/_form.html.twig') }}
+                </div>
+              </div>
+            </div>
+         </div>
 {% endblock %}
 ", "question/new.html.twig", "C:\\wamp64\\www\\my-project\\templates\\question\\new.html.twig");
     }

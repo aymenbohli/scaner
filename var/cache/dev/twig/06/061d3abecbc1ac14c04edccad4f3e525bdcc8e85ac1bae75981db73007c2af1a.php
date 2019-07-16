@@ -38,7 +38,7 @@ class __TwigTemplate_b3d648eeba2183dcf57030039a53d5311385d5d633cb873ce00f7f6043c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "category/_delete_form.html.twig"));
 
         // line 1
-        echo "<form method=\"post\" action=\"";
+        echo "<form method=\"post\" style=\"display: inherit;\" action=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["category"]) || array_key_exists("category", $context) ? $context["category"] : (function () { throw new RuntimeError('Variable "category" does not exist.', 1, $this->source); })()), "id", [])]), "html", null, true);
         echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
@@ -46,7 +46,7 @@ class __TwigTemplate_b3d648eeba2183dcf57030039a53d5311385d5d633cb873ce00f7f6043c
         // line 3
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["category"]) || array_key_exists("category", $context) ? $context["category"] : (function () { throw new RuntimeError('Variable "category" does not exist.', 3, $this->source); })()), "id", []))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"badge badge-danger\">Delete</button>
 </form>
 ";
         
@@ -74,10 +74,10 @@ class __TwigTemplate_b3d648eeba2183dcf57030039a53d5311385d5d633cb873ce00f7f6043c
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('category_delete', {'id': category.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" style=\"display: inherit;\" action=\"{{ path('category_delete', {'id': category.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ category.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"badge badge-danger\">Delete</button>
 </form>
 ", "category/_delete_form.html.twig", "C:\\wamp64\\www\\my-project\\templates\\category\\_delete_form.html.twig");
     }

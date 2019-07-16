@@ -2,294 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bb1ce84-24d5-4543-94b3-f3622e4e0868" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Controller/CategoryCoursController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Entity/CategoryCours.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Form/CategoryCoursType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Repository/CategoryCoursRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/category_cours/_delete_form.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/category_cours/_form.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/category_cours/edit.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/category_cours/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/category_cours/new.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/category_cours/show.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8.legacy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getAdminControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getAnnotations_CacheService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getAnnotations_CacheWarmerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getAnswerRepositoryService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCacheClearerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCacheWarmerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCache_AppClearerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCache_GlobalClearerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCache_SystemClearerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCategoryControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCategoryCoursControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCategoryCoursRepositoryService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCategoryCoursService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCategoryCoursTypeService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCategoryRepositoryService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCategoryService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCategoryTypeService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_CommandLoaderService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_AboutService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_AssetsInstallService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_CacheClearService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_CachePoolClearService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_CachePoolDeleteService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_CachePoolPruneService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_CacheWarmupService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_ConfigDebugService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_ConfigDumpReferenceService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_ContainerDebugService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_DebugAutowiringService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_EventDispatcherDebugService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_FormDebugService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineCache_ContainsCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineCache_DeleteCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineCache_FlushCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineCache_StatsCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineMigrations_DiffCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineMigrations_DumpSchemaCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineMigrations_ExecuteCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineMigrations_GenerateCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineMigrations_LatestCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineMigrations_MigrateCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineMigrations_RollupCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineMigrations_StatusCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineMigrations_UpToDateCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_PublicAlias_DoctrineMigrations_VersionCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_RouterDebugService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_RouterMatchService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_TranslationDebugService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_TranslationUpdateService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_XliffLintService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_Command_YamlLintService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getConsole_ErrorListenerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCoursControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCoursRepositoryService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCoursService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getCoursTypeService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_ArgumentResolver_DefaultService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_ArgumentResolver_RequestAttributeService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_ArgumentResolver_RequestService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_ArgumentResolver_ServiceService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_ArgumentResolver_SessionService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_ArgumentResolver_VariadicService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_DumpListenerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_FileLinkFormatter_UrlFormatService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_Security_UserValueResolverService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_Security_Voter_Security_Access_AuthenticatedVoterService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_Security_Voter_Security_Access_SimpleRoleVoterService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDebug_Security_Voter_VoteListenerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrineCache_Providers_Doctrine_Orm_DefaultMetadataCacheService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrineCache_Providers_Doctrine_Orm_DefaultQueryCacheService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrineCache_Providers_Doctrine_Orm_DefaultResultCacheService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_CacheClearMetadataCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_CacheClearQueryCacheCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_CacheClearResultCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_CacheCollectionRegionCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_ClearEntityRegionCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_ClearQueryRegionCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_DatabaseCreateCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_DatabaseDropCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_DatabaseImportCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_Dbal_DefaultConnectionService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_EnsureProductionSettingsCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_FixturesLoadCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_GenerateEntitiesCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_MappingConvertCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_MappingImportCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_MappingInfoCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_Orm_DefaultEntityManagerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_Orm_DefaultListeners_AttachEntityListenersService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_Orm_ProxyCacheWarmerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_Orm_Validator_UniqueService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_QueryDqlCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_QuerySqlCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_SchemaCreateCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_SchemaDropCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_SchemaUpdateCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getDoctrine_SchemaValidateCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getFileUploaderService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getFilesystemService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_ChoiceListFactory_CachedService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_FactoryService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_RegistryService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_ServerParamsService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_TypeExtension_CsrfService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_TypeExtension_Form_DataCollectorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_TypeExtension_Form_HttpFoundationService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_TypeExtension_Form_TransformationFailureHandlingService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_TypeExtension_Form_ValidatorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_TypeExtension_Upload_ValidatorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_TypeGuesser_DoctrineService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_TypeGuesser_ValidatorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_Type_ChoiceService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_Type_EntityService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_Type_FileService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getForm_Type_FormService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getFragment_Renderer_InlineService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getHttpExceptionListenerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getKnpPaginatorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getLoginFormAuthenticatorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeAuthService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeCommandService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeCrudService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeEntityService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeFixturesService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeFormService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeFunctionalTestService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeMigrationService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeRegistrationFormService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeSerializerEncoderService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeSerializerNormalizerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeSubscriberService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeTwigExtensionService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeUnitTestService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeUserService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeValidatorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_AutoCommand_MakeVoterService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_DoctrineHelperService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_FileManagerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_GeneratorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMaker_Renderer_FormTypeRendererService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getMonolog_Logger_SecurityService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getPaginationInterfaceService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getProductControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getProductRepositoryService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getProductTypeService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getPropertyAccessorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getQuestionControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getQuestionRepositoryService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getQuestionService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getQuestionTypeService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getRedirectControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getRegistrationControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getRegistrationFormTypeService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getRouter_CacheWarmerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getRouting_LoaderService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurityControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_AccessListenerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_AccessMapService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_AuthenticationUtilsService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_Authentication_GuardHandlerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_Authentication_Listener_Anonymous_MainService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_Authentication_Listener_Guard_MainService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_Authentication_Provider_Guard_MainService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_ChannelListenerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_Command_UserPasswordEncoderService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_ContextListener_0Service.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_Csrf_TokenManagerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_Csrf_TokenStorageService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_EncoderFactory_GenericService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_Firewall_Map_Context_DevService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_Firewall_Map_Context_MainService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_PasswordEncoderService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_User_Provider_Concrete_AppUserProviderService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSecurity_Validator_UserPasswordService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getServicesResetterService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSessionService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getSession_Storage_NativeService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTemplateControllerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_ExtractorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_CsvService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_DatService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_IniService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_JsonService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_MoService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_PhpService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_PoService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_QtService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_ResService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_XliffService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_Loader_YmlService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_ReaderService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTranslation_WarmerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTwig_CacheWarmerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTwig_Command_DebugService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTwig_Command_LintService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTwig_Controller_ExceptionService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTwig_Controller_PreviewErrorService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTwig_ExceptionListenerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTwig_Form_RendererService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTwig_Runtime_HttpkernelService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTwig_Runtime_SecurityCsrfService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getTwig_TemplateCacheWarmerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getUserRepositoryService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getValidator_EmailService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getValidator_ExpressionService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getValidator_Mapping_CacheWarmerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getVarDumper_Command_ServerDumpService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getWebProfiler_Controller_ExceptionService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getWebProfiler_Controller_ProfilerService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getWebProfiler_Controller_RouterService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getWebServer_Command_ServerLogService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getWebServer_Command_ServerRunService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getWebServer_Command_ServerStartService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getWebServer_Command_ServerStatusService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/getWebServer_Command_ServerStopService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_2nLzZDjService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_6R9gNN2Service.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_D5mBBZService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_DnS3PVdService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_EbLunufService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_GgSa1IgService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_KTVqfp6Service.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_LSIKWsrService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_Ny4y38jService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_Ow6O9tXService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_TgLzJhkService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator_Wyrb61_Service.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/get_ServiceLocator__JzDQIRService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/removed-ids.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/var/cache/dev/Container01SAQq8/srcApp_KernelDevDebugContainer.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Category.php" afterPath="$PROJECT_DIR$/src/Entity/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/Cours.php" afterPath="$PROJECT_DIR$/src/Entity/Cours.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Form/CoursType.php" afterPath="$PROJECT_DIR$/src/Form/CoursType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/category/new.html.twig" afterPath="$PROJECT_DIR$/templates/category/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__AppEntityCategory.php" afterPath="$PROJECT_DIR$/var/cache/dev/doctrine/orm/Proxies/__CG__AppEntityCategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/+/S/w5KRwmTQ12tL5KCVp47g" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/+/S/w5KRwmTQ12tL5KCVp47g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/3/B/CjULht-a9H+4bMnQ2mfQ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/3/B/CjULht-a9H+4bMnQ2mfQ" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/8/D/CTwAGwAt9bY6Wy1VOoFw" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/8/D/CTwAGwAt9bY6Wy1VOoFw" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/A/K/wdZbhL2MTQE9EWv-hGxw" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/A/K/wdZbhL2MTQE9EWv-hGxw" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/B/7/yT4P3I2k+fk1R8iFIV3A" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/B/7/yT4P3I2k+fk1R8iFIV3A" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/B/Y/pNF9a0bzOHe+yJBOxb5A" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/B/Y/pNF9a0bzOHe+yJBOxb5A" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/C/Q/ARyUkJrq3VKz3MRomfmA" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/C/Q/ARyUkJrq3VKz3MRomfmA" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/E/C/9Ye6e2-sh1nMo7FnIe-g" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/E/C/9Ye6e2-sh1nMo7FnIe-g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/E/E/jXODftaBx8ek8syZj1Jg" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/E/E/jXODftaBx8ek8syZj1Jg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/E/O/PVT7MZD+7Sw5OyoDbI+Q" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/E/O/PVT7MZD+7Sw5OyoDbI+Q" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/F/A/WuZXKBlREml0C72elxtA" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/F/A/WuZXKBlREml0C72elxtA" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/F/F/vkgLYQFox5BvmbSElexA" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/F/F/vkgLYQFox5BvmbSElexA" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/F/S/5y7uKADqvvc+M81XhqCQ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/F/S/5y7uKADqvvc+M81XhqCQ" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/G/Q/ARmjIQiH50K2NRwecA9Q" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/G/Q/ARmjIQiH50K2NRwecA9Q" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/G/V/PPbE2uVn+DaV76npj7nA" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/G/V/PPbE2uVn+DaV76npj7nA" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/H/Z/lXHG9i64oGgz265a56qQ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/H/Z/lXHG9i64oGgz265a56qQ" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/J/M/WyESO3gMrrM8b1tYtLfQ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/J/M/WyESO3gMrrM8b1tYtLfQ" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/M/F/SQHYJhscH2r5wb3FOjbA" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/M/F/SQHYJhscH2r5wb3FOjbA" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/M/S/oEGB6F7MIKHF5AJKnzvA" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/M/S/oEGB6F7MIKHF5AJKnzvA" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/P/J/RMJ1lukqSh-4n0oNAjbQ" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/P/J/RMJ1lukqSh-4n0oNAjbQ" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/P/V/rxvrKYKqlQYu6zy0oOEw" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/P/V/rxvrKYKqlQYu6zy0oOEw" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/Q/V/QdC8fp1fecxk1euwrkgA" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/Q/V/QdC8fp1fecxk1euwrkgA" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/T/0/yTnRdRBLBJjSh8+sowHw" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/T/0/yTnRdRBLBJjSh8+sowHw" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/V/6/fuxAQu15Mk-07oeThKkg" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/V/6/fuxAQu15Mk-07oeThKkg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/X/D/PRXu5gMwa4NvNrd2wjXg" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/X/D/PRXu5gMwa4NvNrd2wjXg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/X/I/naSjp14eb0uN-eXYN65g" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/X/I/naSjp14eb0uN-eXYN65g" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/Z/-/+XgNP5fR--D5+nA2-wtA" afterPath="$PROJECT_DIR$/var/cache/dev/pools/dzWR0jAhNu/Z/-/+XgNP5fR--D5+nA2-wtA" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.php.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainer.xml.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerCompiler.log" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerCompiler.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlGenerator.php" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlGenerator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlGenerator.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlGenerator.php.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlMatcher.php" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlMatcher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlMatcher.php.meta" afterPath="$PROJECT_DIR$/var/cache/dev/srcApp_KernelDevDebugContainerUrlMatcher.php.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/cache/dev/twig/18/1875173ac5cadcbf80ea2559f3606c1ccd8c085f474d71645eb54c336bdccdde.php" afterPath="$PROJECT_DIR$/var/cache/dev/twig/18/1875173ac5cadcbf80ea2559f3606c1ccd8c085f474d71645eb54c336bdccdde.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/log/dev.log" afterPath="$PROJECT_DIR$/var/log/dev.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -300,11 +13,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
+            <state relative-caret-position="4063">
               <caret line="239" column="66" lean-forward="false" selection-start-line="239" selection-start-column="66" selection-end-line="239" selection-end-column="66" />
               <folding />
             </state>
@@ -314,8 +27,8 @@
       <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/category/new.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -437,8 +150,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -485,6 +196,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -603,12 +316,14 @@
       <workItem from="1561233620947" duration="1570000" />
       <workItem from="1561295221985" duration="12934000" />
       <workItem from="1561325127507" duration="5159000" />
-      <workItem from="1561489830571" duration="5675000" />
+      <workItem from="1561489830571" duration="6271000" />
+      <workItem from="1561577135384" duration="1185000" />
+      <workItem from="1563292253103" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86002000" />
+    <option name="totallyTimeSpent" value="87801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -893,14 +608,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/CategoryCours.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/CategoryCours.php" />
     <entry file="file://$PROJECT_DIR$/src/Form/CategoryType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -918,18 +626,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/CategoryCoursType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/CategoryCoursType.php" />
     <entry file="file://$PROJECT_DIR$/src/Controller/CoursController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -968,13 +669,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/category_cours/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="48" column="51" lean-forward="false" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/category_cours/index.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/Controller/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -985,21 +680,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CategoryCoursController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="7" lean-forward="false" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding>
-            <element signature="e#34#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CategoryCoursController.php" />
     <entry file="file://$PROJECT_DIR$/public/admin/css/vertical-layout-light/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="30137" column="1" lean-forward="false" selection-start-line="30137" selection-start-column="1" selection-end-line="30137" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1015,7 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
           <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,15 +706,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding>
-            <element signature="e#28#52#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
+        <state relative-caret-position="4063">
           <caret line="239" column="66" lean-forward="false" selection-start-line="239" selection-start-column="66" selection-end-line="239" selection-end-column="66" />
           <folding />
         </state>
@@ -1047,8 +727,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/category/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>

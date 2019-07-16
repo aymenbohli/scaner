@@ -9,6 +9,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Knp\Component\Pager\PaginatorInterface;
+use App\Service\FileUploader;
 
 /**
  * @Route("/cours")
@@ -18,23 +20,34 @@ class CoursController extends AbstractController
     /**
      * @Route("/", name="cours_index", methods={"GET"})
      */
-    public function index(CoursRepository $coursRepository): Response
-    {
+    public function index(Request $request,CoursRepository $coursRepository,PaginatorInterface $paginator): Response{
+        $pagination = $paginator->paginate(
+                    $coursRepository->findAll(), /* query NOT result */
+                    $request->query->getInt('page', 1), /*page number*/
+                    4 /*limit per page*/
+                );
+
+       // dump($coursRepository->findAll());die;
         return $this->render('cours/index.html.twig', [
-            'cours' => $coursRepository->findAll(),
+            'cours' => $pagination,
         ]);
     }
 
     /**
      * @Route("/new", name="cours_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request,FileUploader $fileUploader): Response
     {
         $cour = new Cours();
         $form = $this->createForm(CoursType::class, $cour);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $request->files->get('cours')['file'];
+            $fileName = $fileUploader->upload($file);
+
+            $cour->setFile($fileName);
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($cour);
             $entityManager->flush();

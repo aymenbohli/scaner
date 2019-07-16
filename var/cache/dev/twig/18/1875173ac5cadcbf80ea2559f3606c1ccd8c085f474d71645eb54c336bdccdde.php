@@ -87,13 +87,14 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
             padding: 15px 0;
         }
     </style>
+    
     ";
-        // line 28
-        $this->displayBlock('stylesheets', $context, $blocks);
         // line 29
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 30
         echo "</head>
 <body ";
-        // line 30
+        // line 31
         echo ">
 <div class=\"container-scroller\">
     <!-- partial:../../partials/_navbar.html -->
@@ -203,7 +204,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                         <a class=\"dropdown-item preview-item\">
                             <div class=\"preview-thumbnail\">
                                 <img src=\"";
-        // line 138
+        // line 139
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/images/faces/face4.jpg"), "html", null, true);
         echo "\" alt=\"image\" class=\"profile-pic\">
                             </div>
@@ -218,7 +219,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                         <a class=\"dropdown-item preview-item\">
                             <div class=\"preview-thumbnail\">
                                 <img src=\"";
-        // line 150
+        // line 151
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/images/faces/face2.jpg"), "html", null, true);
         echo "\" alt=\"image\" class=\"profile-pic\">
                             </div>
@@ -233,7 +234,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                         <a class=\"dropdown-item preview-item\">
                             <div class=\"preview-thumbnail\">
                                 <img src=\"";
-        // line 162
+        // line 163
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/images/faces/face3.jpg"), "html", null, true);
         echo "\" alt=\"image\" class=\"profile-pic\">
                             </div>
@@ -250,7 +251,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                 <li class=\"nav-item nav-user-icon\">
                     <a class=\"nav-link\" href=\"#\">
                         <img src=\"";
-        // line 176
+        // line 177
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/images/faces/face28.jpg"), "html", null, true);
         echo "\" alt=\"profile\"/>
                     </a>
@@ -271,7 +272,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                     <div class=\"nav-link d-flex\">
                         <div class=\"profile-image\">
                             <img src=\"";
-        // line 194
+        // line 195
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/images/faces/face28.png"), "html", null, true);
         echo "\" alt=\"image\">
                         </div>
@@ -293,16 +294,16 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
-        // line 213
+        // line 214
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category_index");
         echo "\">
                         <i class=\"mdi mdi-format-align-justify menu-icon\"></i>
-                        <span class=\"menu-title\">Category</span>
+                        <span class=\"menu-title\">Catégories</span>
                     </a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
-        // line 219
+        // line 220
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("question_index");
         echo "\">
                         <i class=\"mdi mdi-message-processing menu-icon\"></i>
@@ -310,10 +311,10 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                     </a>
                 </li>
              ";
-        // line 230
+        // line 231
         echo "                <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
-        // line 231
+        // line 232
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cours_index");
         echo "\">
                         <i class=\"mdi mdi-book-multiple-variant menu-icon\"></i>
@@ -324,12 +325,32 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
         </nav>
         <!-- partial -->
         <div class=\"main-panel\">
-            <div class=\"content-wrapper\" style=\"background: white;\">
+            <div class=\"content-wrapper\">
+
+           ";
+        // line 243
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 243, $this->source); })()), "flashes", [0 => "success"], "method"));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 244
+            echo "            <div class=\"alert alert-success\">
                 ";
-        // line 241
-        $this->displayBlock('body', $context, $blocks);
-        // line 242
+            // line 245
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+            </div>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 248
         echo "
+             ";
+        // line 249
+        $this->displayBlock('body', $context, $blocks);
+        // line 253
+        echo "</div>
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
                 <div class=\"footer-wrapper\">
@@ -350,35 +371,35 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
 
     ";
-        // line 262
+        // line 273
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 263
+        // line 274
         echo "    <!-- container-scroller -->
     <!-- base:js -->
     <script src=\"";
-        // line 265
+        // line 276
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/vendors/js/vendor.bundle.base.js"), "html", null, true);
         echo "\"></script>
     <!-- endinject -->
     <!-- inject:js -->
     <script src=\"";
-        // line 268
+        // line 279
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/off-canvas.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 269
+        // line 280
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/hoverable-collapse.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 270
+        // line 281
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/template.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 271
+        // line 282
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/settings.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 272
+        // line 283
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/todolist.js"), "html", null, true);
         echo "\"></script>
     <!-- endinject -->
@@ -411,7 +432,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
     }
 
-    // line 28
+    // line 29
     public function block_stylesheets($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -428,7 +449,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
     }
 
-    // line 241
+    // line 249
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -437,6 +458,10 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
+        // line 250
+        echo "
+
+                ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -445,7 +470,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
     }
 
-    // line 262
+    // line 273
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -474,7 +499,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
     public function getDebugInfo()
     {
-        return array (  449 => 262,  432 => 241,  415 => 28,  398 => 7,  382 => 272,  378 => 271,  374 => 270,  370 => 269,  366 => 268,  360 => 265,  356 => 263,  354 => 262,  332 => 242,  330 => 241,  317 => 231,  314 => 230,  306 => 219,  297 => 213,  275 => 194,  254 => 176,  237 => 162,  222 => 150,  207 => 138,  97 => 30,  94 => 29,  92 => 28,  83 => 22,  78 => 20,  70 => 15,  66 => 14,  62 => 13,  53 => 7,  45 => 1,);
+        return array (  474 => 273,  462 => 250,  453 => 249,  436 => 29,  419 => 7,  403 => 283,  399 => 282,  395 => 281,  391 => 280,  387 => 279,  381 => 276,  377 => 274,  375 => 273,  353 => 253,  351 => 249,  348 => 248,  339 => 245,  336 => 244,  332 => 243,  318 => 232,  315 => 231,  307 => 220,  298 => 214,  276 => 195,  255 => 177,  238 => 163,  223 => 151,  208 => 139,  98 => 31,  95 => 30,  93 => 29,  83 => 22,  78 => 20,  70 => 15,  66 => 14,  62 => 13,  53 => 7,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -506,6 +531,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
             padding: 15px 0;
         }
     </style>
+    
     {% block stylesheets %}{% endblock %}
 </head>
 <body {#class=\"sidebar-icon-only\"#}>
@@ -693,7 +719,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"{{ path('category_index') }}\">
                         <i class=\"mdi mdi-format-align-justify menu-icon\"></i>
-                        <span class=\"menu-title\">Category</span>
+                        <span class=\"menu-title\">Catégories</span>
                     </a>
                 </li>
                 <li class=\"nav-item\">
@@ -718,9 +744,19 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
         </nav>
         <!-- partial -->
         <div class=\"main-panel\">
-            <div class=\"content-wrapper\" style=\"background: white;\">
-                {% block body %}{% endblock %}
+            <div class=\"content-wrapper\">
 
+           {% for message in app.flashes('success') %}
+            <div class=\"alert alert-success\">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+             {% block body %}
+
+
+                {% endblock %}
+</div>
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
                 <div class=\"footer-wrapper\">

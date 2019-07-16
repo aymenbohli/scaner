@@ -23,17 +23,7 @@ class QuestionType extends AbstractType
                 'choice_label' => function (Category $customer) {
                     return $customer->getName();
                 },
-            ])
-          /*  ->add('category', CollectionType::class, array(
-                'entry_type' => Category::class,
-                'by_reference' => true
-            ))*/
-            ->add('save', SubmitType::class, array(
-                'attr' => array(
-                    'class' => 'btn btn-primary',
-                ),
-                'label' => 'save'
-            ));
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

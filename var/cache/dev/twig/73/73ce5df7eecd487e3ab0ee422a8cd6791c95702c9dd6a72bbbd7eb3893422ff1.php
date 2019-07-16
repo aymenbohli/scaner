@@ -62,7 +62,7 @@ class __TwigTemplate_57ebfdf5c5120b58d2edb10e051cdbed879f2c12db95c5a8cf2c4820aaf
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "New Category";
+        echo "créer une catégorie";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -81,14 +81,19 @@ class __TwigTemplate_57ebfdf5c5120b58d2edb10e051cdbed879f2c12db95c5a8cf2c4820aaf
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row space20\">
-    <div class=\"col-12\">
-    ";
-        // line 8
+        echo "          <div class=\"row\">
+            <div class=\"col-md-7 grid-margin stretch-card\">
+              <div class=\"card\">
+                <div class=\"card-body\">
+                  <h4 class=\"card-title\">créer une catégorie</h4>
+\t\t\t\t\t";
+        // line 11
         echo twig_include($this->env, $context, "category/_form.html.twig");
         echo "
-    </div>
-</div>
+                </div>
+              </div>
+            </div>
+         </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -110,21 +115,26 @@ class __TwigTemplate_57ebfdf5c5120b58d2edb10e051cdbed879f2c12db95c5a8cf2c4820aaf
 
     public function getDebugInfo()
     {
-        return array (  88 => 8,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  91 => 11,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}New Category{% endblock %}
+{% block title %}créer une catégorie{% endblock %}
 
 {% block body %}
-<div class=\"row space20\">
-    <div class=\"col-12\">
-    {{ include('category/_form.html.twig') }}
-    </div>
-</div>
+          <div class=\"row\">
+            <div class=\"col-md-7 grid-margin stretch-card\">
+              <div class=\"card\">
+                <div class=\"card-body\">
+                  <h4 class=\"card-title\">créer une catégorie</h4>
+\t\t\t\t\t{{ include('category/_form.html.twig') }}
+                </div>
+              </div>
+            </div>
+         </div>
 {% endblock %}
 ", "category/new.html.twig", "C:\\wamp64\\www\\my-project\\templates\\category\\new.html.twig");
     }

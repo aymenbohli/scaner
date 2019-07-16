@@ -2087,6 +2087,14 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
+        <argument>console.command</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -4514,16 +4522,11 @@
         <argument key="category" type="service" id="App\Entity\Category"/>
       </argument>
     </service>
-    <service id=".service_locator.dnS3PVd" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator._ukRkc." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="coursRepository" type="service" id="App\Repository\CoursRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.D5mB_BZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="cour" type="service" id="App\Entity\Cours"/>
+        <argument key="paginator" type="service" id="knp_paginator"/>
       </argument>
     </service>
     <service id=".service_locator.tgLzJhk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4532,9 +4535,16 @@
         <argument key="fileUploader" type="service" id="App\Service\FileUploader"/>
       </argument>
     </service>
-    <service id=".service_locator.2nLzZDj" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.D5mB_BZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="cour" type="service" id="App\Entity\Cours"/>
+      </argument>
+    </service>
+    <service id=".service_locator.AQ2OBh_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paginator" type="service" id="knp_paginator"/>
         <argument key="questionRepository" type="service" id="App\Repository\QuestionRepository"/>
       </argument>
     </service>
@@ -4558,7 +4568,7 @@
         <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.XFnuQeU" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.OmXYxNE" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CategoryController::delete" type="service" id=".service_locator..JzDQIR"/>
@@ -4567,12 +4577,13 @@
         <argument key="App\Controller\CategoryController::show" type="service" id=".service_locator..JzDQIR"/>
         <argument key="App\Controller\CoursController::delete" type="service" id=".service_locator.D5mB_BZ"/>
         <argument key="App\Controller\CoursController::edit" type="service" id=".service_locator.D5mB_BZ"/>
-        <argument key="App\Controller\CoursController::index" type="service" id=".service_locator.dnS3PVd"/>
+        <argument key="App\Controller\CoursController::index" type="service" id=".service_locator._ukRkc."/>
+        <argument key="App\Controller\CoursController::new" type="service" id=".service_locator.tgLzJhk"/>
         <argument key="App\Controller\CoursController::show" type="service" id=".service_locator.D5mB_BZ"/>
         <argument key="App\Controller\ProductController::newProduct" type="service" id=".service_locator.tgLzJhk"/>
         <argument key="App\Controller\QuestionController::delete" type="service" id=".service_locator.6R9gNN2"/>
         <argument key="App\Controller\QuestionController::edit" type="service" id=".service_locator.6R9gNN2"/>
-        <argument key="App\Controller\QuestionController::index" type="service" id=".service_locator.2nLzZDj"/>
+        <argument key="App\Controller\QuestionController::index" type="service" id=".service_locator.AQ2OBh_"/>
         <argument key="App\Controller\QuestionController::show" type="service" id=".service_locator.6R9gNN2"/>
         <argument key="App\Controller\RegistrationController::register" type="service" id=".service_locator.wyrb61."/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.EbLunuf"/>
@@ -4582,12 +4593,13 @@
         <argument key="App\Controller\CategoryController:show" type="service" id=".service_locator..JzDQIR"/>
         <argument key="App\Controller\CoursController:delete" type="service" id=".service_locator.D5mB_BZ"/>
         <argument key="App\Controller\CoursController:edit" type="service" id=".service_locator.D5mB_BZ"/>
-        <argument key="App\Controller\CoursController:index" type="service" id=".service_locator.dnS3PVd"/>
+        <argument key="App\Controller\CoursController:index" type="service" id=".service_locator._ukRkc."/>
+        <argument key="App\Controller\CoursController:new" type="service" id=".service_locator.tgLzJhk"/>
         <argument key="App\Controller\CoursController:show" type="service" id=".service_locator.D5mB_BZ"/>
         <argument key="App\Controller\ProductController:newProduct" type="service" id=".service_locator.tgLzJhk"/>
         <argument key="App\Controller\QuestionController:delete" type="service" id=".service_locator.6R9gNN2"/>
         <argument key="App\Controller\QuestionController:edit" type="service" id=".service_locator.6R9gNN2"/>
-        <argument key="App\Controller\QuestionController:index" type="service" id=".service_locator.2nLzZDj"/>
+        <argument key="App\Controller\QuestionController:index" type="service" id=".service_locator.AQ2OBh_"/>
         <argument key="App\Controller\QuestionController:show" type="service" id=".service_locator.6R9gNN2"/>
         <argument key="App\Controller\RegistrationController:register" type="service" id=".service_locator.wyrb61."/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.EbLunuf"/>
@@ -4992,7 +5004,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.XFnuQeU"/>
+      <argument type="service" id=".service_locator.OmXYxNE"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -5291,7 +5303,7 @@
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.XFnuQeU"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.OmXYxNE"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="validator" alias="debug.validator" public="true"/>

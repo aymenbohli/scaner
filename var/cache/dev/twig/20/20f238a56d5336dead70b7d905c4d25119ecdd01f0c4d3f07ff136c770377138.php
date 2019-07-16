@@ -62,7 +62,7 @@ class __TwigTemplate_1fd97eb5d765cf21ad6bc0e7558bb3cd75a204431a91a01a53f9c53f187
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Category index";
+        echo "Liste catégories";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -81,14 +81,18 @@ class __TwigTemplate_1fd97eb5d765cf21ad6bc0e7558bb3cd75a204431a91a01a53f9c53f187
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "
+        echo "   <div class=\"row\">
+            <div class=\"col-md-12 grid-margin stretch-card\">
+              <div class=\"card\">
+                <div class=\"card-body\">
+                  <h4 class=\"card-title\">Liste catégories</h4>
 
     <div class=\"row space20\">
         <div class=\"col-12\">
-            <a CLASS=\"btn btn-success pull-left\" href=\"";
-        // line 10
+            <a CLASS=\"btn btn-success pull-right\" href=\"";
+        // line 14
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category_new");
-        echo "\">Create new</a>
+        echo "\">Créer</a>
         </div>
     </div>
     <div class=\"row space20\">
@@ -97,47 +101,66 @@ class __TwigTemplate_1fd97eb5d765cf21ad6bc0e7558bb3cd75a204431a91a01a53f9c53f187
                 <table class=\"table table-bordered\">
                     <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>actions</th>
+                        <th>#</th>
+                        <th>Titre</th>
+                        <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
                     ";
-        // line 25
+        // line 29
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 25, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 29, $this->source); })()));
+        $context['loop'] = [
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        ];
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 26
+            // line 30
             echo "                        <tr>
                             <td>";
-            // line 27
+            // line 31
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "id", []), "html", null, true);
             echo "</td>
                             <td>";
-            // line 28
+            // line 32
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "name", []), "html", null, true);
             echo "</td>
                             <td>
-                                <a class=\"btn btn-success\" href=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category_show", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [])]), "html", null, true);
-            echo "\">
-                                    show
-                                </a>
-                                <a class=\"btn btn-success\"
+                                <a class=\"badge badge-info\"
                                    href=\"";
-            // line 34
+            // line 35
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [])]), "html", null, true);
             echo "\">edit</a>
+                                       ";
+            // line 36
+            echo twig_include($this->env, $context, "category/_delete_form.html.twig");
+            echo "
                             </td>
                         </tr>
                     ";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 40
         echo "                    </tbody>
                 </table>
             </div>
@@ -146,11 +169,15 @@ class __TwigTemplate_1fd97eb5d765cf21ad6bc0e7558bb3cd75a204431a91a01a53f9c53f187
     <div class=\"row space20\">
         <div class=\"col-12\">
             ";
-        // line 45
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 45, $this->source); })()), null, [], ["position" => "centered", "size" => "large", "rounded" => true]);
-        // line 49
+        // line 47
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 47, $this->source); })()), null, [], ["position" => "centered", "size" => "large", "rounded" => true]);
+        // line 51
         echo "
         </div>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
 
 ";
@@ -174,21 +201,25 @@ class __TwigTemplate_1fd97eb5d765cf21ad6bc0e7558bb3cd75a204431a91a01a53f9c53f187
 
     public function getDebugInfo()
     {
-        return array (  152 => 49,  150 => 45,  141 => 38,  131 => 34,  124 => 30,  119 => 28,  115 => 27,  112 => 26,  108 => 25,  90 => 10,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  175 => 51,  173 => 47,  164 => 40,  146 => 36,  142 => 35,  136 => 32,  132 => 31,  129 => 30,  112 => 29,  94 => 14,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Category index{% endblock %}
+{% block title %}Liste catégories{% endblock %}
 
 {% block body %}
-
+   <div class=\"row\">
+            <div class=\"col-md-12 grid-margin stretch-card\">
+              <div class=\"card\">
+                <div class=\"card-body\">
+                  <h4 class=\"card-title\">Liste catégories</h4>
 
     <div class=\"row space20\">
         <div class=\"col-12\">
-            <a CLASS=\"btn btn-success pull-left\" href=\"{{ path('category_new') }}\">Create new</a>
+            <a CLASS=\"btn btn-success pull-right\" href=\"{{ path('category_new') }}\">Créer</a>
         </div>
     </div>
     <div class=\"row space20\">
@@ -197,9 +228,9 @@ class __TwigTemplate_1fd97eb5d765cf21ad6bc0e7558bb3cd75a204431a91a01a53f9c53f187
                 <table class=\"table table-bordered\">
                     <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>actions</th>
+                        <th>#</th>
+                        <th>Titre</th>
+                        <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -208,11 +239,9 @@ class __TwigTemplate_1fd97eb5d765cf21ad6bc0e7558bb3cd75a204431a91a01a53f9c53f187
                             <td>{{ category.id }}</td>
                             <td>{{ category.name }}</td>
                             <td>
-                                <a class=\"btn btn-success\" href=\"{{ path('category_show', {'id': category.id}) }}\">
-                                    show
-                                </a>
-                                <a class=\"btn btn-success\"
+                                <a class=\"badge badge-info\"
                                    href=\"{{ path('category_edit', {'id': category.id}) }}\">edit</a>
+                                       {{ include('category/_delete_form.html.twig') }}
                             </td>
                         </tr>
                     {% endfor %}
@@ -229,6 +258,10 @@ class __TwigTemplate_1fd97eb5d765cf21ad6bc0e7558bb3cd75a204431a91a01a53f9c53f187
                 'rounded': true,
             }) }}
         </div>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
 
 {% endblock %}

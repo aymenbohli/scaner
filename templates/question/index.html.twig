@@ -1,47 +1,66 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Question index{% endblock %}
+{% block title %}liste question{% endblock %}
 
 {% block body %}
-    <div class="col-lg-12 grid-margin stretch-card">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">questions</h4>
-                <a class="btn btn-info" href="{{ path('question_new') }}">Create new</a>
-                <div class="table-responsive">
-                    <table class="table table-striped">
+      <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Liste questions</h4>
+
+                    <div class="row space20">
+                        <div class="col-12">
+                            <a CLASS="btn btn-success pull-right" href="{{ path('question_new') }}">Créer</a>
+                        </div>
+                    </div>
+                    <div class="row space20">
+                        <div class="col-12">
+                            <div class="table-responsive">
+                               <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Title</th>
-                            <th>Category</th>
+                            <th>#</th>
+                            <th>Titre</th>
+                            <th>Catégorie</th>
                             <th>actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        {% for questions in questions %}
+                        {% for question in questions %}
                             <tr>
-                                <td>{{ questions.id }}</td>
-                                <td>{{ questions.title }}</td>
-                                <td>{{ questions.category.name }}</td>
+                                <td>{{ question.id }}</td>
+                                <td>{{ question.title }}</td>
+                                <td>{{ question.category.name }}</td>
                                 <td>
-                                    <a class="btn btn-success btn-sm"
-                                       href="{{ path('question_show', {'id': questions.id}) }}"><span
-                                                class="mdi mdi-eye"></span></a>
-                                    <a class="btn btn-warning btn-sm"
-                                       href="{{ path('question_edit', {'id': questions.id}) }}"><span
-                                                class="mdi mdi-table-edit"></span></a>
+                                   <a class="badge badge-info"
+                                       href="{{ path('question_edit', {'id': question.id}) }}">edit</span></a>
+                                      {{ include('question/_delete_form.html.twig') }}
                                 </td>
-                            </tr>
+                            
+                        </tr>
                         {% else %}
                             <tr>
                                 <td colspan="3">no records found</td>
                             </tr>
                         {% endfor %}
                         </tbody>
-                    </table>
-                </div>
-            </div>
+                    </table> 
+                               </div>
         </div>
     </div>
+    <div class="row space20">
+        <div class="col-12">
+            {{ knp_pagination_render(questions, null, {}, {
+                'position': 'centered',
+                'size': 'large',
+                'rounded': true,
+            }) }}
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
 {% endblock %}

@@ -1,11 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Category{% endblock %}
+{% block title %}créer une catégorie{% endblock %}
 
 {% block body %}
-<div class="row space20">
-    <div class="col-12">
-    {{ include('category/_form.html.twig') }}
-    </div>
-</div>
+          <div class="row">
+            <div class="col-md-7 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">créer une catégorie</h4>
+					{{ include('category/_form.html.twig') }}
+                </div>
+              </div>
+            </div>
+         </div>
 {% endblock %}

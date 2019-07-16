@@ -62,7 +62,7 @@ class __TwigTemplate_92cf9ee3812fa335027ef35d71ee5b29bedf25731a473b9565cda44f975
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Edit Category";
+        echo "Modifier une catégorie";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -81,22 +81,19 @@ class __TwigTemplate_92cf9ee3812fa335027ef35d71ee5b29bedf25731a473b9565cda44f975
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Edit Category</h1>
-
-    ";
-        // line 8
-        echo twig_include($this->env, $context, "category/_form.html.twig", ["button_label" => "Update"]);
+        echo "          <div class=\"row\">
+            <div class=\"col-md-7 grid-margin stretch-card\">
+              <div class=\"card\">
+                <div class=\"card-body\">
+                  <h4 class=\"card-title\">Modifier une catégorie</h4>
+\t\t\t\t\t";
+        // line 11
+        echo twig_include($this->env, $context, "category/_form.html.twig");
         echo "
-
-    <a href=\"";
-        // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category_index");
-        echo "\">back to list</a>
-
-    ";
-        // line 12
-        echo twig_include($this->env, $context, "category/_delete_form.html.twig");
-        echo "
+                </div>
+              </div>
+            </div>
+         </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -118,23 +115,26 @@ class __TwigTemplate_92cf9ee3812fa335027ef35d71ee5b29bedf25731a473b9565cda44f975
 
     public function getDebugInfo()
     {
-        return array (  98 => 12,  93 => 10,  88 => 8,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  91 => 11,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Edit Category{% endblock %}
+{% block title %}Modifier une catégorie{% endblock %}
 
 {% block body %}
-    <h1>Edit Category</h1>
-
-    {{ include('category/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href=\"{{ path('category_index') }}\">back to list</a>
-
-    {{ include('category/_delete_form.html.twig') }}
+          <div class=\"row\">
+            <div class=\"col-md-7 grid-margin stretch-card\">
+              <div class=\"card\">
+                <div class=\"card-body\">
+                  <h4 class=\"card-title\">Modifier une catégorie</h4>
+\t\t\t\t\t{{ include('category/_form.html.twig') }}
+                </div>
+              </div>
+            </div>
+         </div>
 {% endblock %}
 ", "category/edit.html.twig", "C:\\wamp64\\www\\my-project\\templates\\category\\edit.html.twig");
     }

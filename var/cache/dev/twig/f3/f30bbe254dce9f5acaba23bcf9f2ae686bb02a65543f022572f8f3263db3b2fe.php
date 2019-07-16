@@ -62,7 +62,7 @@ class __TwigTemplate_da94e215be05860a5bccf24fab5afcf429bf6550b43047a01feb2e9e251
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "New Cours";
+        echo "créer Cours";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -81,17 +81,20 @@ class __TwigTemplate_da94e215be05860a5bccf24fab5afcf429bf6550b43047a01feb2e9e251
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Cours</h1>
-
-    ";
-        // line 8
+        echo "
+<div class=\"row\">
+            <div class=\"col-md-7 grid-margin stretch-card\">
+              <div class=\"card\">
+                <div class=\"card-body\">
+                  <h4 class=\"card-title\">créer Cours</h4>
+\t\t\t\t\t";
+        // line 12
         echo twig_include($this->env, $context, "cours/_form.html.twig");
         echo "
-
-    <a href=\"";
-        // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cours_index");
-        echo "\">back to list</a>
+                </div>
+              </div>
+            </div>
+         </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -113,21 +116,27 @@ class __TwigTemplate_da94e215be05860a5bccf24fab5afcf429bf6550b43047a01feb2e9e251
 
     public function getDebugInfo()
     {
-        return array (  93 => 10,  88 => 8,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  92 => 12,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}New Cours{% endblock %}
+{% block title %}créer Cours{% endblock %}
 
 {% block body %}
-    <h1>Create new Cours</h1>
 
-    {{ include('cours/_form.html.twig') }}
-
-    <a href=\"{{ path('cours_index') }}\">back to list</a>
+<div class=\"row\">
+            <div class=\"col-md-7 grid-margin stretch-card\">
+              <div class=\"card\">
+                <div class=\"card-body\">
+                  <h4 class=\"card-title\">créer Cours</h4>
+\t\t\t\t\t{{ include('cours/_form.html.twig') }}
+                </div>
+              </div>
+            </div>
+         </div>
 {% endblock %}
 ", "cours/new.html.twig", "C:\\wamp64\\www\\my-project\\templates\\cours\\new.html.twig");
     }
