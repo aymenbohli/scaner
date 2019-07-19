@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}créer Classes{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-7 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">créer Classes</h4>
+                    {{ include('classes/_form.html.twig') }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

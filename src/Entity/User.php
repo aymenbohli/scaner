@@ -40,6 +40,26 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $prenom;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $grade;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $is_active;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -116,5 +136,53 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(?string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getPrenom(): ?string
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom(?string $prenom): self
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    public function getGrade(): ?string
+    {
+        return $this->grade;
+    }
+
+    public function setGrade(?string $grade): self
+    {
+        $this->grade = $grade;
+
+        return $this;
+    }
+
+    public function getIsActive(): ?bool
+    {
+        return $this->is_active;
+    }
+
+    public function setIsActive(?bool $is_active): self
+    {
+        $this->is_active = $is_active;
+
+        return $this;
     }
 }

@@ -249,7 +249,6 @@
     <parameter key="twig.exception_listener.controller">twig.controller.exception::showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
-      <parameter>layout/bootstrap_4_horizontal_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">C:\wamp64\www\my-project/templates</parameter>
     <parameter key="security.authentication.trust_resolver.anonymous_class">null</parameter>
@@ -393,11 +392,25 @@
         <argument type="service" id=".service_locator.KTVqfp6.App\Controller\CategoryController"/>
       </call>
     </service>
+    <service id="App\Controller\ClassesController" class="App\Controller\ClassesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.KTVqfp6.App\Controller\ClassesController"/>
+      </call>
+    </service>
     <service id="App\Controller\CoursController" class="App\Controller\CoursController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.KTVqfp6.App\Controller\CoursController"/>
+      </call>
+    </service>
+    <service id="App\Controller\EtudiantController" class="App\Controller\EtudiantController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.KTVqfp6.App\Controller\EtudiantController"/>
       </call>
     </service>
     <service id="App\Controller\ProductController" class="App\Controller\ProductController" public="true" autowire="true" autoconfigure="true">
@@ -428,7 +441,17 @@
         <argument type="service" id=".service_locator.KTVqfp6.App\Controller\SecurityController"/>
       </call>
     </service>
+    <service id="App\Controller\UserController" class="App\Controller\UserController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.KTVqfp6.App\Controller\UserController"/>
+      </call>
+    </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
+    </service>
+    <service id="App\DataFixtures\ClassesFixtures" class="App\DataFixtures\ClassesFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
     <service id="App\DataFixtures\UserFixtures" class="App\DataFixtures\UserFixtures" autowire="true" autoconfigure="true">
@@ -436,14 +459,22 @@
     </service>
     <service id="App\Entity\Answer" class="App\Entity\Answer" autowire="true" autoconfigure="true"/>
     <service id="App\Entity\Category" class="App\Entity\Category" autowire="true" autoconfigure="true"/>
+    <service id="App\Entity\Classes" class="App\Entity\Classes" autowire="true" autoconfigure="true"/>
     <service id="App\Entity\Cours" class="App\Entity\Cours" autowire="true" autoconfigure="true"/>
+    <service id="App\Entity\Etudiant" class="App\Entity\Etudiant" autowire="true" autoconfigure="true"/>
     <service id="App\Entity\Product" class="App\Entity\Product" autowire="true" autoconfigure="true"/>
     <service id="App\Entity\Question" class="App\Entity\Question" autowire="true" autoconfigure="true"/>
     <service id="App\Entity\User" class="App\Entity\User" autowire="true" autoconfigure="true"/>
     <service id="App\Form\CategoryType" class="App\Form\CategoryType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\ClassesType" class="App\Form\ClassesType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\CoursType" class="App\Form\CoursType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\EtudiantType" class="App\Form\EtudiantType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\ProductType" class="App\Form\ProductType" autowire="true" autoconfigure="true">
@@ -455,6 +486,9 @@
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Repository\AnswerRepository" class="App\Repository\AnswerRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -463,7 +497,15 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\ClassesRepository" class="App\Repository\ClassesRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\CoursRepository" class="App\Repository\CoursRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\EtudiantRepository" class="App\Repository\EtudiantRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -748,10 +790,13 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\CategoryType</argument>
+        <argument>App\Form\ClassesType</argument>
         <argument>App\Form\CoursType</argument>
+        <argument>App\Form\EtudiantType</argument>
         <argument>App\Form\ProductType</argument>
         <argument>App\Form\QuestionType</argument>
         <argument>App\Form\RegistrationFormType</argument>
+        <argument>App\Form\UserType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type\EntityType</argument>
@@ -996,7 +1041,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.GBBPtcH"/>
+      <argument type="service" id=".service_locator.3N9Ov80"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -2087,14 +2132,6 @@
         <argument>2048</argument>
       </call>
       <call method="addListener">
-        <argument>console.command</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
         <argument>kernel.request</argument>
         <argument type="collection">
           <argument type="service" id="router_listener"/>
@@ -2875,7 +2912,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.dX7K2zf"/>
+      <argument type="service" id=".service_locator.gDVL.EL"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -3120,11 +3157,10 @@
         <argument key="default_path">C:\wamp64\www\my-project/templates</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
+        <argument key="exception_controller">twig.controller.exception::showAction</argument>
         <argument key="form_themes" type="collection">
           <argument>form_div_layout.html.twig</argument>
-          <argument>layout/bootstrap_4_horizontal_layout.html.twig</argument>
         </argument>
-        <argument key="exception_controller">twig.controller.exception::showAction</argument>
         <argument key="autoescape">name</argument>
         <argument key="cache">C:\wamp64\www\my-project\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
@@ -4064,6 +4100,10 @@
             <argument key="groups" type="collection"/>
           </argument>
           <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\ClassesFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
+          <argument type="collection">
             <argument key="fixture" type="service" id="App\DataFixtures\UserFixtures"/>
             <argument key="groups" type="collection"/>
           </argument>
@@ -4306,9 +4346,15 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CategoryController" class="App\Controller\CategoryController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CategoryController" class="App\Controller\CategoryController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CategoryController" class="App\Controller\CategoryController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ClassesController" class="App\Controller\ClassesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ClassesController" class="App\Controller\ClassesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ClassesController" class="App\Controller\ClassesController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CoursController" class="App\Controller\CoursController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CoursController" class="App\Controller\CoursController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CoursController" class="App\Controller\CoursController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\EtudiantController" class="App\Controller\EtudiantController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\EtudiantController" class="App\Controller\EtudiantController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\EtudiantController" class="App\Controller\EtudiantController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProductController" class="App\Controller\ProductController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProductController" class="App\Controller\ProductController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ProductController" class="App\Controller\ProductController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4321,26 +4367,41 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\UserController" class="App\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\ClassesFixtures" class="App\DataFixtures\ClassesFixtures" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\ClassesFixtures" class="App\DataFixtures\ClassesFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\UserFixtures" class="App\DataFixtures\UserFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\UserFixtures" class="App\DataFixtures\UserFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CategoryType" class="App\Form\CategoryType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CategoryType" class="App\Form\CategoryType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ClassesType" class="App\Form\ClassesType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ClassesType" class="App\Form\ClassesType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CoursType" class="App\Form\CoursType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CoursType" class="App\Form\CoursType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EtudiantType" class="App\Form\EtudiantType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\EtudiantType" class="App\Form\EtudiantType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ProductType" class="App\Form\ProductType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ProductType" class="App\Form\ProductType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\QuestionType" class="App\Form\QuestionType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\QuestionType" class="App\Form\QuestionType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AnswerRepository" class="App\Repository\AnswerRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\AnswerRepository" class="App\Repository\AnswerRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\CategoryRepository" class="App\Repository\CategoryRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ClassesRepository" class="App\Repository\ClassesRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ClassesRepository" class="App\Repository\ClassesRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CoursRepository" class="App\Repository\CoursRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\CoursRepository" class="App\Repository\CoursRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EtudiantRepository" class="App\Repository\EtudiantRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\EtudiantRepository" class="App\Repository\EtudiantRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProductRepository" class="App\Repository\ProductRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ProductRepository" class="App\Repository\ProductRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\QuestionRepository" class="App\Repository\QuestionRepository" autowire="true" abstract="true"/>
@@ -4522,6 +4583,19 @@
         <argument key="category" type="service" id="App\Entity\Category"/>
       </argument>
     </service>
+    <service id=".service_locator.ldZsI0_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="classesRepository" type="service" id="App\Repository\ClassesRepository"/>
+        <argument key="paginator" type="service" id="knp_paginator"/>
+      </argument>
+    </service>
+    <service id=".service_locator.5Pv2Gj6" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="class" type="service" id="App\Entity\Classes"/>
+      </argument>
+    </service>
     <service id=".service_locator._ukRkc." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4539,6 +4613,26 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="cour" type="service" id="App\Entity\Cours"/>
+      </argument>
+    </service>
+    <service id=".service_locator.UJhfId9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="cour" type="service" id="App\Entity\Cours"/>
+        <argument key="fileUploader" type="service" id="App\Service\FileUploader"/>
+      </argument>
+    </service>
+    <service id=".service_locator.7OHfgvt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="etudiantRepository" type="service" id="App\Repository\EtudiantRepository"/>
+        <argument key="paginator" type="service" id="knp_paginator"/>
+      </argument>
+    </service>
+    <service id=".service_locator.ddtE.O9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="etudiant" type="service" id="App\Entity\Etudiant"/>
       </argument>
     </service>
     <service id=".service_locator.AQ2OBh_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4568,18 +4662,46 @@
         <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.OmXYxNE" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.7dmdSMC" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paginator" type="service" id="knp_paginator"/>
+        <argument key="userRepository" type="service" id="App\Repository\UserRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.bEdG22a" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="guardHandler" type="service" id="security.authentication.guard_handler"/>
+        <argument key="passwordEncoder" type="service" id="security.user_password_encoder.generic"/>
+      </argument>
+    </service>
+    <service id=".service_locator.wypGnUQ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="user" type="service" id="App\Entity\User"/>
+      </argument>
+    </service>
+    <service id=".service_locator.JCVky57" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CategoryController::delete" type="service" id=".service_locator..JzDQIR"/>
         <argument key="App\Controller\CategoryController::edit" type="service" id=".service_locator..JzDQIR"/>
         <argument key="App\Controller\CategoryController::index" type="service" id=".service_locator.GgSa1Ig"/>
         <argument key="App\Controller\CategoryController::show" type="service" id=".service_locator..JzDQIR"/>
+        <argument key="App\Controller\ClassesController::delete" type="service" id=".service_locator.5Pv2Gj6"/>
+        <argument key="App\Controller\ClassesController::edit" type="service" id=".service_locator.5Pv2Gj6"/>
+        <argument key="App\Controller\ClassesController::index" type="service" id=".service_locator.ldZsI0_"/>
+        <argument key="App\Controller\ClassesController::show" type="service" id=".service_locator.5Pv2Gj6"/>
         <argument key="App\Controller\CoursController::delete" type="service" id=".service_locator.D5mB_BZ"/>
-        <argument key="App\Controller\CoursController::edit" type="service" id=".service_locator.D5mB_BZ"/>
+        <argument key="App\Controller\CoursController::edit" type="service" id=".service_locator.UJhfId9"/>
         <argument key="App\Controller\CoursController::index" type="service" id=".service_locator._ukRkc."/>
         <argument key="App\Controller\CoursController::new" type="service" id=".service_locator.tgLzJhk"/>
         <argument key="App\Controller\CoursController::show" type="service" id=".service_locator.D5mB_BZ"/>
+        <argument key="App\Controller\EtudiantController::delete" type="service" id=".service_locator.ddtE.O9"/>
+        <argument key="App\Controller\EtudiantController::edit" type="service" id=".service_locator.ddtE.O9"/>
+        <argument key="App\Controller\EtudiantController::index" type="service" id=".service_locator.7OHfgvt"/>
+        <argument key="App\Controller\EtudiantController::show" type="service" id=".service_locator.ddtE.O9"/>
         <argument key="App\Controller\ProductController::newProduct" type="service" id=".service_locator.tgLzJhk"/>
         <argument key="App\Controller\QuestionController::delete" type="service" id=".service_locator.6R9gNN2"/>
         <argument key="App\Controller\QuestionController::edit" type="service" id=".service_locator.6R9gNN2"/>
@@ -4587,15 +4709,28 @@
         <argument key="App\Controller\QuestionController::show" type="service" id=".service_locator.6R9gNN2"/>
         <argument key="App\Controller\RegistrationController::register" type="service" id=".service_locator.wyrb61."/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.EbLunuf"/>
+        <argument key="App\Controller\UserController::delete" type="service" id=".service_locator.wypGnUQ"/>
+        <argument key="App\Controller\UserController::edit" type="service" id=".service_locator.wypGnUQ"/>
+        <argument key="App\Controller\UserController::index" type="service" id=".service_locator.7dmdSMC"/>
+        <argument key="App\Controller\UserController::new" type="service" id=".service_locator.bEdG22a"/>
+        <argument key="App\Controller\UserController::show" type="service" id=".service_locator.wypGnUQ"/>
         <argument key="App\Controller\CategoryController:delete" type="service" id=".service_locator..JzDQIR"/>
         <argument key="App\Controller\CategoryController:edit" type="service" id=".service_locator..JzDQIR"/>
         <argument key="App\Controller\CategoryController:index" type="service" id=".service_locator.GgSa1Ig"/>
         <argument key="App\Controller\CategoryController:show" type="service" id=".service_locator..JzDQIR"/>
+        <argument key="App\Controller\ClassesController:delete" type="service" id=".service_locator.5Pv2Gj6"/>
+        <argument key="App\Controller\ClassesController:edit" type="service" id=".service_locator.5Pv2Gj6"/>
+        <argument key="App\Controller\ClassesController:index" type="service" id=".service_locator.ldZsI0_"/>
+        <argument key="App\Controller\ClassesController:show" type="service" id=".service_locator.5Pv2Gj6"/>
         <argument key="App\Controller\CoursController:delete" type="service" id=".service_locator.D5mB_BZ"/>
-        <argument key="App\Controller\CoursController:edit" type="service" id=".service_locator.D5mB_BZ"/>
+        <argument key="App\Controller\CoursController:edit" type="service" id=".service_locator.UJhfId9"/>
         <argument key="App\Controller\CoursController:index" type="service" id=".service_locator._ukRkc."/>
         <argument key="App\Controller\CoursController:new" type="service" id=".service_locator.tgLzJhk"/>
         <argument key="App\Controller\CoursController:show" type="service" id=".service_locator.D5mB_BZ"/>
+        <argument key="App\Controller\EtudiantController:delete" type="service" id=".service_locator.ddtE.O9"/>
+        <argument key="App\Controller\EtudiantController:edit" type="service" id=".service_locator.ddtE.O9"/>
+        <argument key="App\Controller\EtudiantController:index" type="service" id=".service_locator.7OHfgvt"/>
+        <argument key="App\Controller\EtudiantController:show" type="service" id=".service_locator.ddtE.O9"/>
         <argument key="App\Controller\ProductController:newProduct" type="service" id=".service_locator.tgLzJhk"/>
         <argument key="App\Controller\QuestionController:delete" type="service" id=".service_locator.6R9gNN2"/>
         <argument key="App\Controller\QuestionController:edit" type="service" id=".service_locator.6R9gNN2"/>
@@ -4603,6 +4738,11 @@
         <argument key="App\Controller\QuestionController:show" type="service" id=".service_locator.6R9gNN2"/>
         <argument key="App\Controller\RegistrationController:register" type="service" id=".service_locator.wyrb61."/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.EbLunuf"/>
+        <argument key="App\Controller\UserController:delete" type="service" id=".service_locator.wypGnUQ"/>
+        <argument key="App\Controller\UserController:edit" type="service" id=".service_locator.wypGnUQ"/>
+        <argument key="App\Controller\UserController:index" type="service" id=".service_locator.7dmdSMC"/>
+        <argument key="App\Controller\UserController:new" type="service" id=".service_locator.bEdG22a"/>
+        <argument key="App\Controller\UserController:show" type="service" id=".service_locator.wypGnUQ"/>
       </argument>
     </service>
     <service id=".service_locator.37xBtZ2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4674,14 +4814,17 @@
       <argument type="service" id="debug.argument_resolver.variadic.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.GBBPtcH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.3N9Ov80" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\CategoryType" type="service" id="App\Form\CategoryType"/>
+        <argument key="App\Form\ClassesType" type="service" id="App\Form\ClassesType"/>
         <argument key="App\Form\CoursType" type="service" id="App\Form\CoursType"/>
+        <argument key="App\Form\EtudiantType" type="service" id="App\Form\EtudiantType"/>
         <argument key="App\Form\ProductType" type="service" id="App\Form\ProductType"/>
         <argument key="App\Form\QuestionType" type="service" id="App\Form\QuestionType"/>
         <argument key="App\Form\RegistrationFormType" type="service" id="App\Form\RegistrationFormType"/>
+        <argument key="App\Form\UserType" type="service" id="App\Form\UserType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
@@ -4693,12 +4836,14 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.dX7K2zf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.gDVL.EL" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\AnswerRepository" type="service" id="App\Repository\AnswerRepository"/>
         <argument key="App\Repository\CategoryRepository" type="service" id="App\Repository\CategoryRepository"/>
+        <argument key="App\Repository\ClassesRepository" type="service" id="App\Repository\ClassesRepository"/>
         <argument key="App\Repository\CoursRepository" type="service" id="App\Repository\CoursRepository"/>
+        <argument key="App\Repository\EtudiantRepository" type="service" id="App\Repository\EtudiantRepository"/>
         <argument key="App\Repository\ProductRepository" type="service" id="App\Repository\ProductRepository"/>
         <argument key="App\Repository\QuestionRepository" type="service" id="App\Repository\QuestionRepository"/>
         <argument key="App\Repository\UserRepository" type="service" id="App\Repository\UserRepository"/>
@@ -4883,9 +5028,21 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.KTVqfp6" method="withContext"/>
     </service>
+    <service id=".service_locator.KTVqfp6.App\Controller\ClassesController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\ClassesController"/>
+      <argument>App\Controller\ClassesController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.KTVqfp6" method="withContext"/>
+    </service>
     <service id=".service_locator.KTVqfp6.App\Controller\CoursController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\CoursController"/>
       <argument>App\Controller\CoursController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.KTVqfp6" method="withContext"/>
+    </service>
+    <service id=".service_locator.KTVqfp6.App\Controller\EtudiantController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\EtudiantController"/>
+      <argument>App\Controller\EtudiantController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.KTVqfp6" method="withContext"/>
     </service>
@@ -4910,6 +5067,12 @@
     <service id=".service_locator.KTVqfp6.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
       <argument>App\Controller\SecurityController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.KTVqfp6" method="withContext"/>
+    </service>
+    <service id=".service_locator.KTVqfp6.App\Controller\UserController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\UserController"/>
+      <argument>App\Controller\UserController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.KTVqfp6" method="withContext"/>
     </service>
@@ -5004,7 +5167,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.OmXYxNE"/>
+      <argument type="service" id=".service_locator.JCVky57"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -5303,7 +5466,7 @@
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.OmXYxNE"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.JCVky57"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="validator" alias="debug.validator" public="true"/>

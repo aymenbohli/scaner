@@ -304,6 +304,33 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
         // line 220
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("classes_index");
+        echo "\">
+                        <i class=\"mdi mdi-book menu-icon\"></i>
+                        <span class=\"menu-title\">Classes</span>
+                    </a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"";
+        // line 226
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant_index");
+        echo "\">
+                        <i class=\"mdi mdi-account-settings menu-icon\"></i>
+                        <span class=\"menu-title\">Etudiants</span>
+                    </a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"";
+        // line 232
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_index");
+        echo "\">
+                        <i class=\"mdi mdi-account-settings menu-icon\"></i>
+                        <span class=\"menu-title\">Enseignants</span>
+                    </a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"";
+        // line 238
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("question_index");
         echo "\">
                         <i class=\"mdi mdi-message-processing menu-icon\"></i>
@@ -311,10 +338,10 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                     </a>
                 </li>
              ";
-        // line 231
+        // line 249
         echo "                <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"";
-        // line 232
+        // line 250
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cours_index");
         echo "\">
                         <i class=\"mdi mdi-book-multiple-variant menu-icon\"></i>
@@ -328,14 +355,14 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
             <div class=\"content-wrapper\">
 
            ";
-        // line 243
+        // line 261
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 243, $this->source); })()), "flashes", [0 => "success"], "method"));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 261, $this->source); })()), "flashes", [0 => "success"], "method"));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 244
+            // line 262
             echo "            <div class=\"alert alert-success\">
                 ";
-            // line 245
+            // line 263
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "
             </div>
@@ -344,12 +371,12 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 248
+        // line 266
         echo "
              ";
-        // line 249
+        // line 267
         $this->displayBlock('body', $context, $blocks);
-        // line 253
+        // line 271
         echo "</div>
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
@@ -371,35 +398,35 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
 
     ";
-        // line 273
+        // line 291
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 274
+        // line 292
         echo "    <!-- container-scroller -->
     <!-- base:js -->
     <script src=\"";
-        // line 276
+        // line 294
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/vendors/js/vendor.bundle.base.js"), "html", null, true);
         echo "\"></script>
     <!-- endinject -->
     <!-- inject:js -->
     <script src=\"";
-        // line 279
+        // line 297
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/off-canvas.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 280
+        // line 298
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/hoverable-collapse.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 281
+        // line 299
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/template.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 282
+        // line 300
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/settings.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 283
+        // line 301
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/todolist.js"), "html", null, true);
         echo "\"></script>
     <!-- endinject -->
@@ -449,7 +476,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
     }
 
-    // line 249
+    // line 267
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -458,7 +485,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 250
+        // line 268
         echo "
 
                 ";
@@ -470,7 +497,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
     }
 
-    // line 273
+    // line 291
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -499,7 +526,7 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
 
     public function getDebugInfo()
     {
-        return array (  474 => 273,  462 => 250,  453 => 249,  436 => 29,  419 => 7,  403 => 283,  399 => 282,  395 => 281,  391 => 280,  387 => 279,  381 => 276,  377 => 274,  375 => 273,  353 => 253,  351 => 249,  348 => 248,  339 => 245,  336 => 244,  332 => 243,  318 => 232,  315 => 231,  307 => 220,  298 => 214,  276 => 195,  255 => 177,  238 => 163,  223 => 151,  208 => 139,  98 => 31,  95 => 30,  93 => 29,  83 => 22,  78 => 20,  70 => 15,  66 => 14,  62 => 13,  53 => 7,  45 => 1,);
+        return array (  501 => 291,  489 => 268,  480 => 267,  463 => 29,  446 => 7,  430 => 301,  426 => 300,  422 => 299,  418 => 298,  414 => 297,  408 => 294,  404 => 292,  402 => 291,  380 => 271,  378 => 267,  375 => 266,  366 => 263,  363 => 262,  359 => 261,  345 => 250,  342 => 249,  334 => 238,  325 => 232,  316 => 226,  307 => 220,  298 => 214,  276 => 195,  255 => 177,  238 => 163,  223 => 151,  208 => 139,  98 => 31,  95 => 30,  93 => 29,  83 => 22,  78 => 20,  70 => 15,  66 => 14,  62 => 13,  53 => 7,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -720,6 +747,24 @@ class __TwigTemplate_a505e57ce0a76297709d4b6ae389ca8b2a4d490d477f6381616555e4537
                     <a class=\"nav-link\" href=\"{{ path('category_index') }}\">
                         <i class=\"mdi mdi-format-align-justify menu-icon\"></i>
                         <span class=\"menu-title\">Catégories</span>
+                    </a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"{{ path('classes_index') }}\">
+                        <i class=\"mdi mdi-book menu-icon\"></i>
+                        <span class=\"menu-title\">Classes</span>
+                    </a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"{{ path('etudiant_index') }}\">
+                        <i class=\"mdi mdi-account-settings menu-icon\"></i>
+                        <span class=\"menu-title\">Etudiants</span>
+                    </a>
+                </li>
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"{{ path('user_index') }}\">
+                        <i class=\"mdi mdi-account-settings menu-icon\"></i>
+                        <span class=\"menu-title\">Enseignants</span>
                     </a>
                 </li>
                 <li class=\"nav-item\">

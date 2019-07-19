@@ -52,6 +52,8 @@ class CoursController extends AbstractController
             $entityManager->persist($cour);
             $entityManager->flush();
 
+            $this->addFlash('success', 'question créé!');
+
             return $this->redirectToRoute('cours_index');
         }
 
@@ -74,13 +76,21 @@ class CoursController extends AbstractController
     /**
      * @Route("/{id}/edit", name="cours_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Cours $cour): Response
+    public function edit(Request $request, Cours $cour,FileUploader $fileUploader): Response
     {
         $form = $this->createForm(CoursType::class, $cour);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $file = $request->files->get('cours')['file'];
+            if ($file) {
+                $fileName = $fileUploader->upload($file);
+                $cour->setFile($fileName);
+            }
             $this->getDoctrine()->getManager()->flush();
+
+            $this->addFlash('success', 'question modifier!');
 
             return $this->redirectToRoute('cours_index', [
                 'id' => $cour->getId(),
@@ -102,6 +112,8 @@ class CoursController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($cour);
             $entityManager->flush();
+
+            $this->addFlash('success', 'question Supprimé!');
         }
 
         return $this->redirectToRoute('cours_index');

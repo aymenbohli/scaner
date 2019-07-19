@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste Etudiant{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Liste Etudiant</h4>
+
+                    <div class="row space20">
+                        <div class="col-12">
+                            <a CLASS="btn btn-success pull-right" href="{{ path('etudiant_new') }}">Créer</a>
+                        </div>
+                    </div>
+                    <div class="row space20">
+                        <div class="col-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nom</th>
+                                        <th>Prenom</th>
+                                        <th>Age</th>
+                                        <th>Sex</th>
+                                        <th>Email</th>
+                                        <th>actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for etudiant in etudiants %}
+                                        <tr>
+                                            <td>{{ etudiant.id }}</td>
+                                            <td>{{ etudiant.nom }}</td>
+                                            <td>{{ etudiant.prenom }}</td>
+                                            <td>{{ etudiant.age }}</td>
+                                            <td>{{ etudiant.sex }}</td>
+                                            <td>{{ etudiant.email }}</td>
+                                            <td>
+                                                <a class="badge badge-info" href="{{ path('etudiant_edit', {'id': etudiant.id}) }}">show</a>
+                                                {{ include('etudiant/_delete_form.html.twig') }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        <tr>
+                                            <td colspan="7">no records found</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row space20">
+                        <div class="col-12">
+                            {{ knp_pagination_render(etudiants, null, {}, {
+                                'position': 'centered',
+                                'size': 'large',
+                                'rounded': true,
+                            }) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
